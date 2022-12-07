@@ -1,6 +1,4 @@
-pnicholosn|Nintendo|Admin
+pnicholson|Nintendo|Admin
 knicholson|Ramen4|user
-pnicholson|Nintendo|admin
-knicholosn|Ramen|user
-pnicholson|Nintendo|admin
-knicholson|Ramen|user
+lnicholson|Naruto|user
+qnicholson|pokemon|admin
