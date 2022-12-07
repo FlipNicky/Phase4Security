@@ -6,7 +6,7 @@ from datetime import datetime
 def CreateUsers():
     print('##### Create users, passwords, and roles #####')
     ########## Open the file user.txt in append mode and assign to UserFile
-    UserFile = open('user.txt', 'a+')
+    UserFile = open('Users.txt', 'a+')
 
     while True:
         ########## Write the line of code that will call function GetUserName and assign the return value to username
@@ -21,7 +21,8 @@ def CreateUsers():
         UserFile.write(UserDetail)
     # close file to save data
     ########## Write the line of code that will close the file UserFile
-    UserFile.close()    
+    UserFile.close() 
+    printuserinfo()
 
 
 def GetUserName():
@@ -70,7 +71,7 @@ def Login():
        ########## Write the line of code that will replace the carriage return in UserDetail
        UserDetail = UserDetail.replace("\n", "")
        ########## Write the line of code that will split UserDetail on the pipe delimiter (|) and assign it to UserList
-       UserDetail = UserList.split("|")           
+       UserList = UserDetail.split("|")           
        if UserName == UserList[0]:
             UserRole = UserList[2]  # user is valid, return role
             return UserRole, UserName
@@ -163,6 +164,8 @@ def PrintTotals(EmpTotals):
 if __name__ == "__main__":
     ##################################################
     ########## Write the line of code to call the method CreateUsers
+    EmpFile = open("Employees.txt", "a+")                
+
     CreateUsers()
     print()
     print("##### Data Entry #####")
@@ -179,7 +182,6 @@ if __name__ == "__main__":
         ##### write the if statement that will check to see if the UserRole is equal to ADMIN (NOTE: code will show red error lines until this line is written)
         
    
-            EmpFile = open("Employees.txt", "a+")                
             while True:
                 empname = GetEmpName()
                 if (empname.upper() == "END"):
